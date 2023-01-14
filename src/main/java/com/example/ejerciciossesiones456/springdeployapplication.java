@@ -1,5 +1,6 @@
 package com.example.ejerciciossesiones456;
 
+import com.example.ejerciciossesiones456.entidades.Laptop;
 import com.example.ejerciciossesiones456.repositorios.LaptopRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -43,7 +44,7 @@ public class springdeployapplication {
 		ApplicationContext context = SpringApplication.run(springdeployapplication.class, args);
 		LaptopRepository laptopRepository = context.getBean(LaptopRepository.class);
 
-		//laptopRepository.save(new Laptop(null, "Banghó", "ACXAQ", 300.0));
+		laptopRepository.save(new Laptop(null, "Banghó", "ACXAQ", 300.0));
 		System.out.println("Cantidad de laptops en la base de datos: " + laptopRepository.count());
 	}
 
