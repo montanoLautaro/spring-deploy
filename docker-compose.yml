@@ -17,7 +17,7 @@ services:
     image: "mysql:8.0.31"
     container_name: db
     environment:
-      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=
       - MYSQL_DATABASE=spring_deploy
     ports:
       - "3306:3306"      
