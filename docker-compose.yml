@@ -1,29 +1,15 @@
 version: "3.8"
 services:
-<<<<<<< HEAD
-  db:
-    image: "mysql:8.0.31"
-    container_name: db
-    environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=spring_deploy
-    ports:
-      - "3307:3306"
-=======
->>>>>>> 03522b426159a5a87b8d28622a5e7dfcaa1a1569
   spring:
       image: "spring-boot-mysql:latest"
       build:
         context: .
       container_name: spring
       environment:
-        SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/spring_deploy
+        SPRING_DATASOURCE_URL: jdbc:mysql://db:3307/spring_deploy
         SPRING_DATABASE_USERNAME: root
-<<<<<<< HEAD
         SPRING_DATASOURCE_PASSWORD: root
-=======
-        SPRING_DATASOURCE_PASSWORD: 
->>>>>>> 03522b426159a5a87b8d28622a5e7dfcaa1a1569
+
         SPRING_JPA_HIBERNATE_DDL_AUTO: create
         SPRING_JPA_SHOW_SQL: true
       ports:
@@ -32,7 +18,7 @@ services:
     image: "mysql:8.0.31"
     container_name: db
     environment:
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=spring_deploy
     ports:
       - "3306:3306"      
